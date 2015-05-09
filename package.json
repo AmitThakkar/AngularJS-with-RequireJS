@@ -1,0 +1,30 @@
+{
+  "name": "AngularJS-with-RequireJS",
+  "version": "1.0.0",
+  "description": "This repository contains a demo explaining how to use RequireJS with AngularJS.",
+  "main": "route.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/NamitaMalik/AngularJS-with-RequireJS.git"
+  },
+  "keywords": [
+    "AngularJS",
+    "RequireJS",
+    "AMD"
+  ],
+  "author": "Namita Malik",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/NamitaMalik/AngularJS-with-RequireJS/issues"
+  },
+  "homepage": "https://github.com/NamitaMalik/AngularJS-with-RequireJS",
+  "dependencies": {
+    "angular": "^1.3.15",
+    "angular-route": "^1.3.15",
+    "angularAMD": "git://github.com/marcoslin/angularAMD.git",
+    "requirejs": "^2.1.17"
+  }
+}

@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>$routeParams in AngularJS</title>
+</head>
+<body ng-app="myApp">
+<div ng-controller="RoutingController">
+    <a href="#/route1/book-1/page-5">Route 1</a> | <a href="#/route2/book-2/page-6">Route 2</a><br/><br/><br/>
+
+    <div ng-view></div>
+</div>
+<script src="node_modules/angular/angular.min.js"></script>
+<script src="node_modules/angular-route/angular-route.min.js"></script>
+<script src="route.js">
+</script>
+</body>
+</html>
