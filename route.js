@@ -5,25 +5,34 @@ var module = angular.module("myApp", ['ngRoute']);
 
 module.config(['$routeProvider', function ($routeProvider) {
     $routeProvider
-        .when('/route1/:param1/:param2', {
-            templateUrl: 'route1.html',
-            controller: 'RoutingController'
+        .when('/product', {
+            templateUrl: 'product.html',
+            controller: 'ProductController',
+            controllerAs: 'productController'
         })
-        .when('/route2/:param1/:param2', {
-            templateUrl: 'route2.html',
-            controller: 'RoutingController'
+        .when('/cart', {
+            templateUrl: 'cart.html',
+            controller: 'CartController',
+            controllerAs: 'cartController'
+        })
+        .when('/payment', {
+            templateUrl: 'payment.html',
+            controller: 'PaymentController',
+            controllerAs: 'paymentController'
         })
         .otherwise({
-            redirectTo: '/route1/default-book/default-page'
+            redirectTo: '/cart'
         });
 }]);
-module.controller("RoutingController", function ($scope, $routeParams, $location) {
-    // Using $location service
-    var url = $location.path().split('/');
-    $scope.firstParameter = url[2];
-    $scope.secondParameter = url[3];
-
-    // Using $routeParams
-    $scope.param1 = $routeParams.param1;
-    $scope.param2 = $routeParams.param2;
+module.controller("ProductController", function () {
+    var productController = this;
+    productController.message = "Product Page looks awesome!"
+});
+module.controller("CartController", function () {
+    var cartController = this;
+    cartController.message = "Cart Page looks awesome!"
+});
+module.controller("PaymentController", function () {
+    var paymentController = this;
+    paymentController.message = "Payment Page looks awesome!"
 });

@@ -4,11 +4,8 @@
     <title>$routeParams in AngularJS</title>
 </head>
 <body ng-app="myApp">
-<div ng-controller="RoutingController">
-    <a href="#/route1/book-1/page-5">Route 1</a> | <a href="#/route2/book-2/page-6">Route 2</a><br/><br/><br/>
-
-    <div ng-view></div>
-</div>
+<a href="#/product">Product</a> | <a href="#/cart">Cart</a> | <a href="#/payment">Payment</a><br/><br/><br/>
+<div ng-view></div>
 <script src="node_modules/angular/angular.min.js"></script>
 <script src="node_modules/angular-route/angular-route.min.js"></script>
 <script src="route.js">
