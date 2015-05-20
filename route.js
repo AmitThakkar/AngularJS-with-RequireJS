@@ -1,7 +1,7 @@
 /**
  * Created by Namita Malik on 29/1/15.
  */
-define(['angularAMD', 'angular-route'], function (angularAMD) {
+define(['angularAMD', 'angular-route', 'jquery', 'bootstrap'], function (angularAMD) {
     var module = angular.module("route", ['ngRoute']);
     module.config(['$routeProvider', function ($routeProvider) {
         $routeProvider
