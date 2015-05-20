@@ -1,11 +1,60 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <script data-main="main.js" src="./node_modules/requirejs/require.js"></script>
+    <link rel="stylesheet" type="text/css" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="./css/bootstrap-theme.min.css">
     <title>$routeParams in AngularJS</title>
+    <style type="text/css">
+        body {
+            padding-top: 70px;
+        }
+    </style>
 </head>
 <body>
-<a href="#/product">Product</a> | <a href="#/cart">Cart</a> | <a href="#/payment">Payment</a><br/><br/><br/>
-<div ng-view></div>
+<nav id="myNavbar" class="navbar navbar-default navbar-inverse navbar-fixed-top" role="navigation">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbarCollapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="http://codechutney.in/blog/">Code Chutney</a>
+        </div>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="nav navbar-nav">
+                <li><a href="#/product">Product</a></li>
+                <li><a href="#/cart">Cart</a></li>
+                <li><a href="#/payment">Payment</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+<div class="container">
+    <div class="jumbotron">
+        <h2>Getting started with RequireJS</h2>
+
+        <p>We are using AngularAMD in this demo. AngularAMD is a utility that facilitates the use of RequireJS in
+            angular
+            applications.We have also tried to decorate this demo using twitter bootstrap. Do leave a comment on this
+            blog so that we can all enhance our learning experience.</p>
+    </div>
+    <div class="row">
+        <div class=" col-xs-4" ng-view></div>
+        <div class=" col-xs-4" ng-view></div>
+        <div class=" col-xs-4" ng-view></div>
+    </div>
+    <hr>
+    <div class="row">
+        <div class="col-xs-12">
+            <footer>
+                <p>&copy; Copyright 2015 Code Chutney</p>
+            </footer>
+        </div>
+    </div>
+</div>
 </body>
 </html>
