@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="./jquery-1.11.3.min.js"></script>
+    <script src="./node_modules/angular/angular.min.js"></script>
+    <script src="./js/bootstrap.min.js"></script>
+    <script src="./LoginController.js"></script>
+    <link rel="stylesheet" type="text/css" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="./css/bootstrap-theme.min.css">
+    <title>$routeParams in AngularJS</title>
+    <style type="text/css">
+        body {
+            padding-top: 70px;
+        }
+    </style>
+</head>
+<body ng-app="loginApp">
+<div ng-controller="LoginController">
+    <nav id="myNavbar" class="navbar navbar-default navbar-inverse navbar-fixed-top" role="navigation">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbarCollapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="http://codechutney.in/blog/">Code Chutney</a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+                <ul class="nav navbar-nav">
+                    <li><a href="#/product">Product</a></li>
+                    <li><a href="#/cart">Cart</a></li>
+                    <li><a href="#/payment">Payment</a></li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="/AngularJS-with-RequireJS/login.html">Login</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="container">
+        <form>
+            <div class="form-group">
+                <label for="inputEmail">Email</label>
+                <input type="email" id="inputEmail" class="form-control" placeholder="Email">
+            </div>
+            <div class="form-group">
+                <label for="inputPassword">Password</label>
+                <input type="password" id="inputPassword" class="form-control" placeholder="Password">
+            </div>
+            <div>
+                <button type="submit" class="btn btn-primary">Login</button>
+                <span><small>Not Registered? Click on <a ng-click="showSignUpModal()">Sign Up</a>.</small></span>
+            </div>
+        </form>
+        <hr>
+        <div id="myModal" class="modal fade">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dissmiss="modal" aria-hidden="true">&times;</button>
+                        <h4 class="modal-title">Sign Up</h4>
+                    </div>
+                    <div class="modal-body">
+                        <form>
+                            <div class="form-group">
+                                <label for="modalInputEmail">Email</label>
+                                <input type="email" id="modalInputEmail" class="form-control" placeholder="Email">
+                            </div>
+                            <div class="form-group">
+                                <label for="modalInputPassword">Password</label>
+                                <input type="password" id="modalInputPassword" class="form-control"
+                                       placeholder="Password">
+                            </div>
+                            <div class="form-group">
+                                <label for="modalCnfrmPassword">Password</label>
+                                <input type="password" id="modalCnfrmPassword" class="form-control"
+                                       placeholder="Confirm Password">
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                <button type="submit" class="btn btn-primary">Register User</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-12">
+                <footer>
+                    <p>&copy; Copyright 2015 Code Chutney</p>
+                </footer>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

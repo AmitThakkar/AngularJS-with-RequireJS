@@ -4,6 +4,6 @@
 define(['route'], function (route) {
     route.controller("ProductController", function () {
         var productController = this;
-        productController.message = "Product Page looks awesome!"
+        productController.message = "Product Page looks awesome!";
     });
 });
