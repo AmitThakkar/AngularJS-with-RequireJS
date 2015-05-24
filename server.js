@@ -8,7 +8,8 @@
     var express = require('express'),
         bodyParser = require('body-parser');
     var app = express();
-    app.use(express.static('Part-3'));
+    app.use(express.static('public'));
+    app.use(express.static('node_modules'));
     app.use('/lib', express.static('lib'));
     app.use(bodyParser.json());
     app.get('/user', function (req, res) {

@@ -4,11 +4,11 @@
 require.config({
     baseUrl: "",
     paths: {
-        'angular': '../node_modules/angular/angular.min.js',
-        'angular-route': '../node_modules/angular-route/angular-route.min.js',
-        'angularAMD': '../node_modules/angularAMD/dist/angularAMD.min.js',
-        'jquery': './../node_modules/jquery/dist/jquery.min.js',
-        'bootstrap': './../node_modules/bootstrap/dist/js/bootstrap.min.js'
+        'angular': './angular/angular.min',
+        'angular-route': './angular-route/angular-route.min',
+        'angularAMD': './angularAMD/dist/angularAMD.min',
+        'jquery': './jquery/dist/jquery.min',
+        'bootstrap': './bootstrap/dist/js/bootstrap.min'
 
     },
     shim: {
