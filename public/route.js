@@ -6,25 +6,25 @@ define(['angularAMD', 'angular-route', 'jquery', 'bootstrap'], function (angular
     module.config(['$routeProvider', function ($routeProvider) {
         $routeProvider
             .when('/product', angularAMD.route({
-                templateUrl: 'product.html',
+                templateUrl: './product/product.html',
                 controller: 'ProductController',
                 controllerAs: 'productController',
-                controllerUrl: './ProductController'
+                controllerUrl: './product/ProductController'
             }))
             .when('/cart', angularAMD.route({
-                templateUrl: 'cart.html',
+                templateUrl: './cart/cart.html',
                 controller: 'CartController',
                 controllerAs: 'cartController',
-                controllerUrl: './CartController'
+                controllerUrl: './cart/CartController'
             }))
             .when('/payment', angularAMD.route({
-                templateUrl: 'payment.html',
+                templateUrl: './payment/payment.html',
                 controller: 'PaymentController',
                 controllerAs: 'paymentController',
-                controllerUrl: './PaymentController'
+                controllerUrl: './payment/PaymentController'
             }))
             .otherwise({
-                redirectTo: '/cart'
+                redirectTo: '/cart.html',
             });
     }]);
     return angularAMD.bootstrap(module);
